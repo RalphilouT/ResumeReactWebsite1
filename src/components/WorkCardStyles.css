@@ -51,6 +51,7 @@
 .WorkPicture{
     justify-content: space-between;
     display: flex;
+    transition: 0.8s;
     
 }
 .WorkPicture .IMAGE{
