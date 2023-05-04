@@ -1,0 +1,110 @@
+.navmenu{
+    display: flex;
+}
+
+.navmenu li{
+    padding: 0 2rem; /* 0 top/Bottom, 1 left to right*/
+}
+.navmenu li {
+    font-weight: 500;
+    font-size: 1.2rem;  
+}
+/* .header{
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    padding: 1rem; 
+} */
+/*Animation*/
+
+div.container{
+    display: flex; /*One row*/
+    justify-content: space-between; /*right side*/
+    align-items: center; /*Center of box*/
+    padding: 1rem; /*Allign to Resume title*/
+    border-radius: 8px;
+    left: 5%;
+    top: 10px;
+    /*Make background with the navbar*/
+	position: fixed;
+    width: 90%;
+    height: 90px;
+    z-index: 10;
+}
+div.container-bg{
+    background-color: rgba(97, 97, 97, 0.85);
+    transition: 0.5s;
+}
+div.container a{
+    color: #000000;
+    font-size: 1.2rem;  
+    margin: 0px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+div.top a:before, div.top a:after
+{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #000000;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+div.top a:before
+{
+    top: 0px;
+    transform: translateY(10px);
+}
+.background
+{
+    background: #fdfafa;
+}
+div.top a:after
+{
+    bottom: 0px;
+    transform: translateY(-10px);
+}
+div.top a:hover:before, div.top a:hover:after
+{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.hidenavbarhamburger{
+    display:none;
+}
+
+/*If screen gets smaller*/
+@media screen  and (max-width:1040px){
+    .navmenu{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(67, 67, 67, 0.85);
+        position: absolute;
+        top: 0;
+        left: -110%;
+        z-index: -3;
+        transition: 0.3s;
+    }
+    .navmenu.active{
+        left:0
+    }
+    .navmenu li{
+        padding: 1rem 0;
+    }
+
+    .navmenu li a{
+        font-size: 2rem;
+    }
+    .hidenavbarhamburger{
+        display: initial;
+    }
+    
+}
+

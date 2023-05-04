@@ -1,0 +1,55 @@
+.AboutPage{
+    width: 100%;
+    margin: 3rem 0rem; /*top/bottom left/right*/
+    display:flex; /*one row*/
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap; /*One Column*/
+    height: 100%;
+}
+/*Padding represents the amount of inner space an element has, 
+while the margin is whitespace available surrounding an element.*/
+.AboutPage .LeftSide{
+    text-align: center;
+    margin: auto; /*space between div*/
+    padding: 1rem; /*affects text*/
+    max-width: 350px;
+
+}
+.AboutPage h1{
+    color: black;
+}
+.AboutPage .LeftSide p{
+    margin: 1.2rem 0;
+
+}
+.AboutPage .RightSide{
+    max-width: 700px;
+
+}
+
+/*Picture Stacking*/
+.RightSide .imagecontainer{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+    align-items: center;
+    text-align: center;
+}
+.RightSide .image{
+    max-width: 90%;
+    border:  1px solid #333;
+
+}
+.RightSide .imagetop{
+    grid-column: 1 / span 8;
+    grid-row: 1;
+    padding-top:  20%;
+    z-index: 6;
+}
+
+.RightSide .imagebottom{
+    grid-column: 4 / -3; /*How big the grid are*/
+    grid-row: 1;
+    z-index: 5;
+}

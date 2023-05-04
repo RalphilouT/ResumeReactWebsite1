@@ -1,0 +1,94 @@
+.footer{
+    width: 100%;
+    padding: 6rem 0;
+    background-color:  rgba(67, 67, 67, 0.85);
+}
+.footerContent{
+    max-width:  1140px;
+    margin: auto;
+    display: grid;
+
+    /*grid adjustment*/
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 40px;
+}
+.Picture{
+    max-width: 100px;
+    border-radius: 50%
+}
+.leftSide{
+    height: 100%;
+    max-width: 100%;
+    display:flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+.home,.email,.phone{
+    display: flex;
+    margin-bottom: 0.8rem;
+
+}
+p,h4{
+    line-height: 30px;
+    font-size: 1.2rem;
+    color: black;
+    display: flex;
+}
+
+
+.rightSide{
+    height: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+.social{
+    margin-top: 1rem;
+    display: flex;
+    
+    padding: 0.5rem 0;
+}
+
+
+
+h4{
+    font-size: 1.2rem;
+    padding-bottom: 0.7rem;
+}
+
+@media screen and (max-width: 620px) {
+    .footerContent{
+        /*grid adjustment*/
+        grid-template-columns: 1fr;
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .footerContent .leftSide{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .Picture{
+        display: block; 
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+    .social{
+        position:relative;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+        display:flex;
+        
+    }
+    
+    
+}
