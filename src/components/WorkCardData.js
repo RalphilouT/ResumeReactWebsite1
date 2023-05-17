@@ -21,7 +21,7 @@ const WorkCardData = [
     },
     {
         imgsrc: Work3,
-        title: "Resume Website",
+        title: "Resume Website in native react",
         content: "Using react api, I am able to create a responsive resume website that can be adjusted in a simple manner.",
         
         source: "https://github.com/RalphilouT"
@@ -32,6 +32,13 @@ const WorkCardData = [
         content: "Using PHP integration of database manipulation, I was able to create a search engine for users to use to find their favorite movies and books in various libraries around the country.",
         
         source: "https://github.com/CSE111FinalProject/CSE111finalproject"
+    },
+    {
+        imgsrc: Work3,
+        title: "Resume Website in .NET 6, MVC",
+        content: "Using react api, I am able to create a responsive resume website that can be adjusted in a simple manner. Database that was used is MSSMS. The deployment database and set up is done in azure.",
+        
+        source: "https://github.com/RalphilouT"
     }
 ]
 
