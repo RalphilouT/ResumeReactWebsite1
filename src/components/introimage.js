@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const introimage = () => {
   return <div className="hero1">
     <div className="imageHome">
-    <img className="introImage" src={IntroImg} alt="IntroImage"/>
+      <img className="introImage" src={IntroImg} alt="IntroImage"/>
     </div>
     <div className="content">
       <p>Software Engineer</p>

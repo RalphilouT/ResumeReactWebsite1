@@ -2,6 +2,7 @@ import Work1 from "../assets/Work1.png"
 import Work2 from "../assets/Work2.png";
 import Work3 from "../assets/Work3.png";
 import Work4 from "../assets/Work4.png";
+import Work5 from "../assets/Work5.png";
 /**
  * Data set for Work Card, json form
  */
@@ -34,11 +35,11 @@ const WorkCardData = [
         source: "https://github.com/CSE111FinalProject/CSE111finalproject"
     },
     {
-        imgsrc: Work3,
+        imgsrc: Work5,
         title: "Resume Website in .NET 6, MVC",
-        content: "Using react api, I am able to create a responsive resume website that can be adjusted in a simple manner. Database that was used is MSSMS. The deployment database and set up is done in azure.",
+        content: "Using react api, I am able to create a responsive resume website that can be adjusted in a simple manner. Database that was used is MSSMS. The deployment database and set up is done in azure. A bit of libraries that functions the email, connection, jquery, etc.",
         
-        source: "https://github.com/RalphilouT"
+        source: "https://github.com/RalphilouT/WebApplicationR"
     }
 ]
 
