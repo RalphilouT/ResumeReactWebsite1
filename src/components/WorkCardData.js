@@ -37,7 +37,7 @@ const WorkCardData = [
     {
         imgsrc: Work5,
         title: "Resume Website in .NET 6, MVC",
-        content: "Using react api, I am able to create a responsive resume website that can be adjusted in a simple manner. Database that was used is MSSMS. The deployment database and set up is done in azure. A bit of libraries that functions the email, connection, jquery, etc.",
+        content: "Using asp.net mvc, I am able to create a responsive resume website that can be adjusted in a simple manner. Database that was used is MSSMS. The deployment database and set up is done in azure. A bit of libraries that functions the email, connection, jquery, etc.",
         
         source: "https://github.com/RalphilouT/WebApplicationR"
     }
