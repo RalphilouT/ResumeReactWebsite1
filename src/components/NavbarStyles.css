@@ -1,20 +1,54 @@
 .navmenu{
     display: flex;
+    
 }
 
 .navmenu li{
     padding: 0 2rem; /* 0 top/Bottom, 1 left to right*/
+    
+    
 }
-.navmenu li {
+
+.navmenu li{
     font-weight: 500;
     font-size: 1.2rem;  
 }
-/* .header{
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center;
-    padding: 1rem; 
+
+/*Hides down down*/
+.navDropdown{
+    position: absolute;
+    top: 60%;
+    left: 64.5%;
+    display: none;
+    text-decoration: none;
+    
+}
+
+/* align */
+.navDropdown li {
+    display: block;
+    
+}
+/* .navDropdown{
+    display:block;
 } */
+
+.navDropdown.active{
+    display:block;
+    
+}
+.navDropdown.active li{
+    padding-bottom: 10px;
+    padding-top: 5%;
+    
+}
+
+.dropDown{
+    top: 2px;
+    right: 10px;
+}
+
+
 /*Animation*/
 
 div.container{
@@ -35,6 +69,9 @@ div.container-bg{
     background-color: rgba(97, 97, 97, 0.85);
     transition: 0.5s;
 }
+
+
+
 div.container a{
     color: #000000;
     font-size: 1.2rem;  
@@ -54,9 +91,12 @@ div.top a:before, div.top a:after
     opacity: 0;
     transition: all 0.3s;
 }
+
+
 div.top a:before
 {
     top: 0px;
+
     transform: translateY(10px);
 }
 .background
@@ -73,8 +113,42 @@ div.top a:hover:before, div.top a:hover:after
     opacity: 1;
     transform: translateY(0px);
 }
+
+div.top a.dropDown:hover:before, div.top a.dropDown:hover:after
+{
+    opacity: 0;
+    transform: translateY(0px);
+}
+
+div.dropDown{
+    display: flex; /*One row*/
+    justify-content: space-between; /*right side*/
+    align-items: center; /*Center of box*/
+    padding: 1rem; /*Allign to Resume title*/
+    border-radius: 8px;
+    left: 5%;
+    top: 10px;
+    /*Make background with the navbar*/
+	position: fixed;
+    width: 90%;
+    height: 90px;
+    z-index: 10;
+}
+div.dropDown-bg{
+    background-color: rgba(97, 97, 97, 0.85);
+    transition: 0.5s;
+}
+.navDropdown.active{
+    background-color: rgba(97, 97, 97, 0.85);
+    border-radius: 25px;
+    opacity: 1;
+    margin-top: 10px;
+}
 .hidenavbarhamburger{
     display:none;
+}
+.navDropdown1{
+    display: none;
 }
 
 /*If screen gets smaller*/
@@ -104,6 +178,15 @@ div.top a:hover:before, div.top a:hover:after
     }
     .hidenavbarhamburger{
         display: initial;
+    }
+    .navDropdown.active{
+        top: 35%;
+        display:none;
+    }
+    .navDropdown1.active{
+        top: 35%;
+        display:block;
+        
     }
     
 }

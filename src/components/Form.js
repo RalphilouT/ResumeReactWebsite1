@@ -43,7 +43,7 @@ class Form extends Component{
     
     return(
       <React.Fragment>
-          <div className="form">
+          <div className="form" ref="effects">
       <form>
         <label htmlFor="NAME">
           Your Name

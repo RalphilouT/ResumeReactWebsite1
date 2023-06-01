@@ -1,0 +1,99 @@
+.project1{
+    width: 100%;
+    margin: 3rem 0rem; /*top/bottom left/right*/
+    display:flex; /*one row*/
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap; /*One Column*/
+    height: 100%;
+    
+}
+/*Padding represents the amount of inner space an element has, 
+while the margin is whitespace available surrounding an element.*/
+.project1 .LeftSide{
+    text-align: center;
+    margin: auto; /*space between div*/
+    padding: 1rem; /*affects text*/
+    max-width: 350px;
+
+}
+.project1 h1{
+    color: black;
+}
+.project1 .LeftSide p{
+    margin: 1.2rem 0;
+
+}
+.project1 .RightSide{
+    max-width: 700px;
+
+}
+
+/*Picture Stacking*/
+.RightSide .imagecontainer{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+    align-items: center;
+    text-align: center;
+}
+.RightSide .image{
+    max-width: 90%;
+    border:  1px solid #333;
+
+}
+.RightSide .imagetop{
+    grid-column: 1 / span 8;
+    grid-row: 1;
+    padding-top:  20%;
+    z-index: 6;
+}
+
+.RightSide .imagebottom{
+    grid-column: 4 / -3; /*How big the grid are*/
+    grid-row: 1;
+    z-index: 5;
+}
+
+.project1 .RightSide1{
+    max-width: 700px;
+    margin-left: 10%;
+}
+.project1 .LeftSide1{
+    text-align: center;
+    margin: auto; /*space between div*/
+    padding: 1rem; /*affects text*/
+    max-width: 350px;
+
+}
+
+.project1 .LeftSide1 p{
+    margin: 1.2rem 0;
+
+}
+
+/*Picture Stacking*/
+.RightSide1 .imagecontainer{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+    align-items: center;
+    text-align: center;
+}
+.RightSide1 .image{
+    max-width: 90%;
+    border:  1px solid #333;
+
+}
+.RightSide1 .imagetop{
+    grid-column: 1 / span 8;
+    grid-row: 1;
+    padding-top:  20%;
+    z-index: 6;
+}
+
+.RightSide1 .imagebottom{
+    grid-column: 4 / -3; /*How big the grid are*/
+    grid-row: 1;
+    z-index: 5;
+}

@@ -1,7 +1,5 @@
 import React,{useState} from "react";
 import "./WorkCardStyles.css";
-import {FaTimes} from "react-icons/fa"
-import { IconName } from "react-icons/ai";
 import {AiOutlineZoomIn,AiOutlineZoomOut} from 'react-icons/ai'
 
 
