@@ -2,7 +2,7 @@ import React from "react";
 import "./EducationCardStyles.css"
 import EducationCard from "./EducationCard";
 import EducationCardData from "./EducationCardData";
-
+// import { Timeline } from 'react-twitter-widgets'
 const Pricing = () =>{
     return <div className="cardGrid">
     <h1 className="EducationHeading">School History</h1>

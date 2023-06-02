@@ -5,7 +5,8 @@ import twitter from 'react-useanimations/lib/twitter'
 import linkedin from 'react-useanimations/lib/linkedin'
 import home from 'react-useanimations/lib/home'
 import archive from 'react-useanimations/lib/archive'
-
+// import { TwitterEmbed } from 'react-social-media-embed';
+import { Timeline } from 'react-twitter-widgets'
 // import notification from 'react-useanimations/lib/notification'
 // import {FaHome,FaPhone,FaMailBulk,FaGithub,FaTwitter, FaLinkedin} from "react-icons/fa";
 import React from "react";
@@ -46,6 +47,10 @@ const Footer = () => {
             </div>
           </h4> 
         </div>
+        <div style={{ display: 'flex', justifyContent: 'auto' }}>
+        {/* <TwitterEmbed url="https://twitter.com/Lakers/status/1315472674177478656" width={325} /> */}
+          <Timeline dataSource={{ sourceType: "profile", screenName: "ralphilou1" }} options={{ width: "300", height: "300" }}/>
+        </div>
       </div>
       <div className="rightSide">
           <h4>About Me</h4>
@@ -67,6 +72,7 @@ const Footer = () => {
           </div>
       </div>
     </div>
+    {/* <div class="tagembed-container" style={{width:'100%', height:'100%', overflow:'auto'}}><div class="tagembed-socialwall" data-wall-id="104189" view-url="https://widget.tagembed.com/104189">  </div> <script src="//widget.tagembed.com/embed.min.js" type="text/javascript"></script></div> */}
 
   </div>;
 };
