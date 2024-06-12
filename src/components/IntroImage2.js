@@ -6,7 +6,7 @@ class IntroImage2 extends Component {
   render() {
     return (<div className="introimg2">
       <div className="introIMAGE2">
-        
+
       </div>
       <div className="header">
         <h1>{this.props.header}</h1>

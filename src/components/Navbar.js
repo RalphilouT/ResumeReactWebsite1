@@ -35,21 +35,23 @@ const Navbar = () => {
           <Link to="/Project" class="button">Project 
           
 
-          </Link><a className="dropDown" onClick={handleClick1}>
-          {click1 ? (<IoIosArrowDropdown size={20} style={{color:"#000"}}/>): (<IoIosArrowDropleft size={20} style={{color:"#000"}}/>)}
+          </Link><a className="dropDown" href="#" onClick={handleClick1} >
+          {click1 ? (<IoIosArrowDropdown size={20} style={{color:"#000"}}/>): (<IoIosArrowDropleft size={20} style={{color:"#000"} }/>) }
           </a>
           <ul className= {click1 ? "navDropdown active" : "navDropdown"}>
             <li><Link to="/Project" class="button">All Projects</Link></li>
+            <li><Link to="/Project2" class="button">API, Frontend, Test</Link></li>
             <li><Link to="/Project1" class="button">React Website</Link></li>
-        
           </ul>
           
           
       </li>
      
       <li className= {click1 ? "navDropdown1 active" : "navDropdown1"}><Link to="/Project" class="button">Projects</Link></li>
-      <li className= {click1 ? "navDropdown1 active" : "navDropdown1"}><Link to="/Project1" class="button">Project 1</Link></li>
-        
+      <li className= {click1 ? "navDropdown1 active" : "navDropdown1"}><Link to="/Project2" class="button">API, Frontend, Test</Link></li>
+
+      <li className= {click1 ? "navDropdown1 active" : "navDropdown1"}><Link to="/Project1" class="button">React Website</Link></li>
+
           
       <li>
           <Link to="/Contact">Contact</Link>

@@ -49,7 +49,7 @@ const Footer = () => {
         </div>
         <div style={{ display: 'flex', justifyContent: 'auto' }}>
         {/* <TwitterEmbed url="https://twitter.com/Lakers/status/1315472674177478656" width={325} /> */}
-          <Timeline dataSource={{ sourceType: "profile", screenName: "ralphilou1" }} options={{ width: "300", height: "300" }}/>
+          <Timeline dataSource={{ sourceType: "profile", screenName: "ralphilou1" }} options={{ width: "300", height: "300" , theme: "dark"}}/>
         </div>
       </div>
       <div className="rightSide">

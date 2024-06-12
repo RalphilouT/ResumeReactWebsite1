@@ -17,16 +17,17 @@
 /*Hides down down*/
 .navDropdown{
     position: absolute;
-    top: 60%;
-    left: 71%;
+    margin: 0rem -3rem;
     display: none;
     text-decoration: none;
     
 }
 
 /* align */
-.navDropdown li {
+.navDropdown.active li {
     display: block;
+    padding: 0rem 2rem;
+    margin: 0 0rem;
     
 }
 /* .navDropdown{
@@ -154,6 +155,7 @@ div.dropDown-bg{
 /*If screen gets smaller*/
 @media screen  and (max-width:1040px){
     .navmenu{
+
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -167,10 +169,12 @@ div.dropDown-bg{
         transition: 0.3s;
     }
     .navmenu.active{
-        left:0
+        left:0;
+        
     }
     .navmenu li{
         padding: 1rem 0;
+        
     }
 
     .navmenu li a{
@@ -182,10 +186,13 @@ div.dropDown-bg{
     .navDropdown.active{
         top: 35%;
         display:none;
+        
+        
     }
     .navDropdown1.active{
         top: 35%;
         display:block;
+        text-decoration: underline;
         
     }
     

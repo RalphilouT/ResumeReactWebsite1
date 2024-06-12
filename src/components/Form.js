@@ -21,7 +21,7 @@ class Form extends Component{
     let SubjectInput = this.state.SUBJECT;
     let MessageInput = this.state.MESSAGE;
     // writeUserData(NameInput,EmailInput, SubjectInput,MessageInput);
-    fetch("https://ralphilouresume-default-rtdb.firebaseio.com/"+this.state.NAME +".json",
+    fetch("https://ralphilouresume-default-rtdb.firebaseio.com/Contact.json",
        {
            method:'POST',
            headers:{
