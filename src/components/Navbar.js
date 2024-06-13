@@ -35,9 +35,9 @@ const Navbar = () => {
           <Link to="/Project" class="button">Project 
           
 
-          </Link><a className="dropDown" href="#" onClick={handleClick1} >
+          </Link><button className="dropDown" onClick={handleClick1} >
           {click1 ? (<IoIosArrowDropdown size={20} style={{color:"#000"}}/>): (<IoIosArrowDropleft size={20} style={{color:"#000"} }/>) }
-          </a>
+          </button>
           <ul className= {click1 ? "navDropdown active" : "navDropdown"}>
             <li><Link to="/Project" class="button">All Projects</Link></li>
             <li><Link to="/Project2" class="button">API, Frontend, Test</Link></li>

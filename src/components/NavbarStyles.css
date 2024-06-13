@@ -49,6 +49,11 @@
     right: 10px;
 }
 
+button{
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
 
 /*Animation*/
 
