@@ -2,12 +2,18 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
+import { ClerkProvider } from '@clerk/clerk-react'
 import { BrowserRouter } from "react-router-dom";
 
-ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-  document.getElementById("root"),
-  
-);
+// import { BrowserRouter } from "react-router-dom";
+const clerkPubKey = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY
+
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(
+  <ClerkProvider publishableKey={clerkPubKey}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+    
+  </ClerkProvider>,
+)

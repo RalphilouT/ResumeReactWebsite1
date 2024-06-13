@@ -8,7 +8,7 @@ import Contact from "./routes/Contact";
 import { Route, Routes } from "react-router-dom";
 import Project1 from "./routes/Project1";
 import Project2 from "./routes/Project2";
-
+import Logging from "./routes/Logging";
 class App extends Component{
   
   
@@ -23,6 +23,7 @@ class App extends Component{
           <Route path="/project2" element={<Project2 />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/home" element={<Logging/>}/>
         </Routes>
       </>
         
@@ -30,23 +31,7 @@ class App extends Component{
   }
   
 }
-// function App() {
- 
-//   return (
-//     <>
-      
-//       <Routes>
-//         <Route path="/" element={<Home />} />
-//         <Route path="/project" element={<Project />} />
-//         <Route path="/project1" element={<Project1 />} />
-//         <Route path="/about" element={<About />} />
-//         <Route path="/contact" element={<Contact />} />
-//       </Routes>
-//     </>
-      
-//   );
-  
-// }
+
 
 
 export default App;

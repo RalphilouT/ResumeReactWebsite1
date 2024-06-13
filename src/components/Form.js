@@ -1,6 +1,7 @@
 import "./FormStyles.css";
 import React, { Component } from "react";
-// import writeUserData from "../Firebase"
+
+// import {useUser } from '@clerk/clerk-react'
 
 
 class Form extends Component{
@@ -20,6 +21,7 @@ class Form extends Component{
     let EmailInput = this.state.EMAIL;
     let SubjectInput = this.state.SUBJECT;
     let MessageInput = this.state.MESSAGE;
+
     // writeUserData(NameInput,EmailInput, SubjectInput,MessageInput);
     fetch("https://ralphilouresume-default-rtdb.firebaseio.com/Contact.json",
        {
@@ -42,11 +44,13 @@ class Form extends Component{
   render () {
     
     return(
+      
       <React.Fragment>
-          <div className="form" ref="effects">
+      {/* {user ? <div>Your email address is {user.primaryEmailAddress.emailAddress}</div> : null} */}
+      <div className="form" ref="effects">
       <form>
         <label htmlFor="NAME">
-          Your Name
+          
         </label>
         <input type="text" name="NAME" value={this.state.NAME} onChange={this.handleChange}/>
         <label htmlFor="EMAIL">

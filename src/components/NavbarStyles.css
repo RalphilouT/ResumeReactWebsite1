@@ -22,11 +22,24 @@
     text-decoration: none;
     
 }
+.navDropdown1{
+    position: absolute;
+    margin: 0rem -3rem;
+    display: none;
+    text-decoration: none;
+    
+}
 
 /* align */
 .navDropdown.active li {
     display: block;
     padding: 0rem 2rem;
+    margin: 0 0rem;
+    
+}
+.navDropdown1.active li {
+    display: block;
+    padding: 0rem 4rem;
     margin: 0 0rem;
     
 }
@@ -44,11 +57,26 @@
     
 }
 
+.navDropdown1.active{
+    display:block;
+    
+}
+.navDropdown1.active li{
+    padding-bottom: 10px;
+    padding-top: 5%;
+    
+}
+
 .dropDown{
     top: 2px;
     right: 10px;
 }
 
+button{
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
 
 /*Animation*/
 
@@ -140,6 +168,12 @@ div.dropDown-bg{
     transition: 0.5s;
 }
 .navDropdown.active{
+    background-color: rgba(97, 97, 97, 0.85);
+    border-radius: 25px;
+    opacity: 1;
+    margin-top: 10px;
+}
+.navDropdown1.active{
     background-color: rgba(97, 97, 97, 0.85);
     border-radius: 25px;
     opacity: 1;
