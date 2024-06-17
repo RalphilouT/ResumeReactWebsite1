@@ -1,6 +1,6 @@
 import "./FormStyles.css";
 import React, { Component } from "react";
-
+import emailjs from "@emailjs/browser";
 // import {useUser } from '@clerk/clerk-react'
 
 
@@ -15,8 +15,17 @@ class Form extends Component{
    
 
   }
-  
-  submit = () =>{
+  sendEmail(e) {
+    e.preventDefault();    
+
+    emailjs.sendForm('service_6coqo6y', 'template_za8925s', e.target, 'ioFo_P5mUZOccqCiB')
+      .then((result) => {
+          window.location.reload();
+      }, (error) => {
+          console.log(error.text);
+      });
+  }
+  submit = (e) =>{
     let NameInput = this.state.NAME;
     let EmailInput = this.state.EMAIL;
     let SubjectInput = this.state.SUBJECT;
@@ -35,11 +44,10 @@ class Form extends Component{
             Subject: SubjectInput,
             MessageInput: MessageInput
            })
-        }).then(alert("Sent!"))
+        })
         .catch((error)=>{
           alert("Error!");
-        })
-    
+        }); 
   }
   render () {
     
@@ -48,9 +56,9 @@ class Form extends Component{
       <React.Fragment>
       {/* {user ? <div>Your email address is {user.primaryEmailAddress.emailAddress}</div> : null} */}
       <div className="form" ref="effects">
-      <form>
+      <form onSubmit={this.sendEmail}>
         <label htmlFor="NAME">
-          
+          Your Name
         </label>
         <input type="text" name="NAME" value={this.state.NAME} onChange={this.handleChange}/>
         <label htmlFor="EMAIL">
