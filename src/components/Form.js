@@ -1,6 +1,7 @@
 import "./FormStyles.css";
 import React, { Component } from "react";
-// import writeUserData from "../Firebase"
+import emailjs from "@emailjs/browser";
+// import {useUser } from '@clerk/clerk-react'
 
 
 class Form extends Component{
@@ -14,12 +15,24 @@ class Form extends Component{
    
 
   }
-  
-  submit = () =>{
+  sendEmail(e) {
+    e.preventDefault();    
+    const serviceID = process.env.REACT_APP_SERVICE_ID;
+    const templateID = process.env.REACT_APP_TEMPLATE_ID;
+    const userID=process.env.REACT_APP_USER_ID;
+    emailjs.sendForm(serviceID,templateID, e.target, userID)
+      .then((result) => {
+          window.location.reload();
+      }, (error) => {
+          console.log(error.text);
+      });
+  }
+  submit = (e) =>{
     let NameInput = this.state.NAME;
     let EmailInput = this.state.EMAIL;
     let SubjectInput = this.state.SUBJECT;
     let MessageInput = this.state.MESSAGE;
+
     // writeUserData(NameInput,EmailInput, SubjectInput,MessageInput);
     fetch("https://ralphilouresume-default-rtdb.firebaseio.com/Contact.json",
        {
@@ -33,18 +46,19 @@ class Form extends Component{
             Subject: SubjectInput,
             MessageInput: MessageInput
            })
-        }).then(alert("Sent!"))
+        })
         .catch((error)=>{
           alert("Error!");
-        })
-    
+        }); 
   }
   render () {
     
     return(
+      
       <React.Fragment>
-          <div className="form" ref="effects">
-      <form>
+      {/* {user ? <div>Your email address is {user.primaryEmailAddress.emailAddress}</div> : null} */}
+      <div className="form" ref="effects">
+      <form onSubmit={this.sendEmail}>
         <label htmlFor="NAME">
           Your Name
         </label>
@@ -69,16 +83,13 @@ class Form extends Component{
         
       </form>
     </div>
-    {/* <h3>Your Name is: {this.state.NAME}</h3>
-    <h3>Your EMAIL is: {this.state.MESSAGE}</h3> */}
+  
       </React.Fragment>
       
     );
   }
 }
-// const Form = () => {
-//   return 
-// };
+
 
 export default Form;
 
