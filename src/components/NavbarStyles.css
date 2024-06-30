@@ -197,8 +197,10 @@ div.dropDown-bg{
     .navDropdown1.active{
         top: 35%;
         display:block;
-        text-decoration: underline;
-        
+        background-color: rgba(186, 186, 186, 0.85);
+        border-radius: 25px;
+        opacity: 1;
+        margin-top: 10px;
     }
     
 }

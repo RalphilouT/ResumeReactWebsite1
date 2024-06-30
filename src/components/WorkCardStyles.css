@@ -48,6 +48,17 @@
 .WorkButtons .button1{
     padding: 0.5rem 1rem;
 }
+
+.button2{
+    padding: 12px 32px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    background-color: #3a3a3a;
+    color: white;
+    border-radius: 8px;
+    position: relative;
+    margin: auto;
+}
 .WorkPicture{
     justify-content: space-between;
     display: flex;
@@ -87,5 +98,14 @@
         transition: 0.8s;
         justify-content: space-between;
         display: flex;
+    }
+    .button2{
+        margin: auto;
+        padding: 3px 8px;
+        font-size: 1rem;
+        text-transform: uppercase;
+        background-color: #3a3a3a;
+        color: white;
+        border-radius: 8px;
     }
 }
