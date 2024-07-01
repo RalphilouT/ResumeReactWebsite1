@@ -5,7 +5,7 @@ import WorkCardData from "./WorkCardData";
 
 const Work = () => {
   const [sortState, setSortState] = useState("none");
-
+  
   const sorting = {
     none: {method: (a,b) => null},
     ascending: {method: (a,b) => (a.title < b.title ? -1 : 1)},

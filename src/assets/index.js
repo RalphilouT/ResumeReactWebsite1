@@ -18,8 +18,19 @@ import Work3 from "./Work3.png"
 import Work4 from "./Work4.png"
 import Work5 from "./Work5.png"
 import Work6 from "./Work6.png"
-
+import react from "./react.png"
+import spring from "./springjpg.jpg"
+import fetchjs from "./fetchjs.png"
+import timeseriesanalysis from "./timeseriesanalysis.png"
+import cplusplus from "./c++.png"
+import openGl from "./opengl.png"
+import php from "./php.png"
+import sqlite from "./sqlite.jpg"
+import aspnet from "./aspnet.jpg"
+import website from "./website.jpg"
 
 export {api, api2, api3, BCCHS, introbg, Me, MVC1, projectonereact, projectonedata2, projectonedata3
-    , react1, react2, SMC, Work1, Work2, Work3, Work4, Work5, Work6, UCM
+    , react1, react2, SMC, Work1, Work2, Work3, Work4, Work5, Work6, UCM,
+    react, spring, fetchjs, timeseriesanalysis, cplusplus, openGl, php, sqlite
+    , aspnet, website
 }

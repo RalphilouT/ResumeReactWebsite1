@@ -65,6 +65,7 @@
 @media screen and (max-width:620px){
     .hero1 .content h1{
         font-size:  3rem; 
+        width: 100%;
     }
     
     .hero1 .content p{
