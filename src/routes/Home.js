@@ -1,15 +1,13 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import IntroImage from "../components/introimage";
-import Footer1 from "../components/Footer";
+import { Navbar, Footer } from "../components";
 
 const Home = () => {
   return(
-    
     <div>
       <Navbar/>
       <IntroImage/>
-      <Footer1/>
+      <Footer/>
     </div>
   );
 };

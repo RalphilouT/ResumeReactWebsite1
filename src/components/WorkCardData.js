@@ -1,16 +1,10 @@
-import Work1 from "../assets/Work1.png"
-import Work2 from "../assets/Work2.png";
-import Work3 from "../assets/Work3.png";
-import Work4 from "../assets/Work4.png";
-import Work5 from "../assets/Work5.png";
-import Work6 from "../assets/Work6.png";
-import Work7 from "../assets/api.png"
+import { Work1, Work2, Work3, Work4, Work5, Work6, api } from "../assets";
 /**
  * Data set for Work Card, json form
  */
 const WorkCardData = [
     {
-        imgsrc: Work7,
+        imgsrc: api,
         title: "Backend, Frontend, Testing",
         content: "Project involving backend, frontend, and automated testing. The backend is powered by spring. The frontend was in React. The testing used were for unit testing via junit package, the frontend testing via selenium, and the backend testing via rest assured.",
         indepthsummary: true,

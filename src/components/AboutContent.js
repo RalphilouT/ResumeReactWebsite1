@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
 import "./AboutContentStyles.css";
-
 import React from "react";
-import react1 from "../assets/Me.jpg"
-import react2 from "../assets/react2.jpg"
+import { react1, react2 } from "../assets";
+
 const AboutContent = () => {
   return <div className="AboutPage">
   <div className="LeftSide">

@@ -3,6 +3,7 @@ import "./NavbarStyles.css";
 import React, { useState } from "react";
 import {FaBars, FaTimes} from "react-icons/fa"
 import { IoIosArrowDropleft, IoIosArrowDropdown } from "react-icons/io";
+
 const Navbar = () => {
   const[click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
@@ -19,6 +20,7 @@ const Navbar = () => {
     }
   };
   window.addEventListener("scroll",changeColor);
+  
   return (
     
   <div className={color ? "container container-bg top" :"container top"}>

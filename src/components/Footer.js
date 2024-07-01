@@ -10,7 +10,9 @@ import { Timeline } from 'react-twitter-widgets'
 // import notification from 'react-useanimations/lib/notification'
 // import {FaHome,FaPhone,FaMailBulk,FaGithub,FaTwitter, FaLinkedin} from "react-icons/fa";
 import React from "react";
-import Me from "../assets/Me.jpg"
+import { Me } from "../assets";
+
+
 const Footer = () => {
   return <div className="footer">
     <div className="footerContent">

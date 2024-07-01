@@ -1,9 +1,8 @@
-import UCMLogo from "../assets/UCM.png"
-import SMCLogo from "../assets/SMC.png"
-import BCCHSLogo from "../assets/BCCHS.png"
+import { UCM, SMC, BCCHS } from "../assets";
+
 const PricingCardData = [
     {
-        logosrc: UCMLogo,
+        logosrc: UCM,
         title: "University of California Merced",
         Website:"https://www.ucmerced.edu",
         GPA:"3.85 GPA",
@@ -12,7 +11,7 @@ const PricingCardData = [
         Content:"UC Merced opened Sept. 5, 2005, as the newest campus in the University of California system and the first American research university of the 21st century. Situated near Yosemite National Park, the campus significantly expands access to the UC system for students throughout the state, with a special mission to increase college-going rates among students in the San Joaquin Valley. It also serves as a major base of advanced research, a model of sustainable design and construction, and a stimulus to economic growth and diversification throughout the region."
     },
     {
-        logosrc: SMCLogo,
+        logosrc: SMC,
         title: "Santa Monica College",
         Website:"https://www.smc.edu/",
         GPA:"3.3 GPA",
@@ -21,7 +20,7 @@ const PricingCardData = [
         Content:"Santa Monica College (SMC) is a public, community college in Santa Monica, California. Founded as a junior college in 1929, SMC enrolls over 30,000 students in more than 90 fields of study."
     },
     {
-        logosrc: BCCHSLogo,
+        logosrc: BCCHS,
         title: "Birmingham Community Charter High School",
         Website:"https://www.birminghamcharter.com/",
         GPA:"3.2 GPA",

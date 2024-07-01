@@ -1,0 +1,25 @@
+import api from "./api.png"
+import api2 from "./api2.jpg"
+import api3 from "./api3.png"
+import BCCHS from "./BCCHS.png"
+import introbg from "./intro-bg.jpg"
+import Me from "./Me.jpg"
+import MVC1 from "./MVC1.png"
+import projectonedata2  from "./projectonedata2.png"
+import projectonedata3  from "./projectonedata3.png"
+import projectonereact  from "./projectonereact.png"
+import react1 from "./react1.jpg"
+import react2  from "./react2.jpg"
+import SMC from "./SMC.png"
+import UCM from "./UCM.png"
+import Work1 from "./Work1.png"
+import Work2 from "./Work2.png"
+import Work3 from "./Work3.png"
+import Work4 from "./Work4.png"
+import Work5 from "./Work5.png"
+import Work6 from "./Work6.png"
+
+
+export {api, api2, api3, BCCHS, introbg, Me, MVC1, projectonereact, projectonedata2, projectonedata3
+    , react1, react2, SMC, Work1, Work2, Work3, Work4, Work5, Work6, UCM
+}

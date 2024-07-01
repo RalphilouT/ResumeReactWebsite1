@@ -1,17 +1,12 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Footer1 from "../components/Footer";
-import Introimage2 from "../components/IntroImage2";
-import Education from "../components/Education";
-import AboutContent from "../components/AboutContent";
-
+import { Navbar, Footer, IntroImage2, Education, AboutContent } from "../components";
 const About = () => {
   return <div>
   <Navbar/>
-  <Introimage2 header="ABOUT" paragraph="Software Engineer"/>
+  <IntroImage2 header="ABOUT" paragraph="Software Engineer"/>
   <AboutContent/>
   <Education/>
-  <Footer1/>
+  <Footer/>
 </div>;
 };
 

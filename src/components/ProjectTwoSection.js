@@ -1,8 +1,7 @@
-
 import "./ProjectTwoStyles.css"
-
-import react2 from "../assets/react2.jpg"
+import { react2 } from "../assets";
 import React from "react";
+
 const ProjectTwoSection = (props) =>{
     if(props.leftside === "LeftSide"){
         return <div className="project2">
