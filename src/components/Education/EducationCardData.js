@@ -1,4 +1,4 @@
-import { UCM, SMC, BCCHS } from "../assets";
+import { UCM, SMC, BCCHS } from "../../assets";
 
 const PricingCardData = [
     {

@@ -1,4 +1,4 @@
-import { api, api2, api3 } from "../assets"
+import { api, api2, api3 } from "../../assets"
 
 const ProjectTwoData = [
     {

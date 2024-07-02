@@ -1,6 +1,6 @@
 import { Work1, Work2, Work3, Work4, Work5, Work6, api, react, spring, fetchjs
     , timeseriesanalysis, cplusplus, openGl, sqlite, php, website, aspnet
- } from "../assets";
+ } from "../../assets";
 /**
  * Data set for Work Card, json form
  */

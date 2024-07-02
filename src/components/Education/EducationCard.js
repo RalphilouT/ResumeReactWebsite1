@@ -1,4 +1,4 @@
-import "./EducationCardStyles.css";
+import "./style.css";
 
 const EducationCard = (props) => {
   

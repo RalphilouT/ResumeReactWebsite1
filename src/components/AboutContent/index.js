@@ -1,9 +1,16 @@
 import { Link } from "react-router-dom";
-import "./AboutContentStyles.css";
+import "./style.css";
 import React from "react";
-import { react1, react2 } from "../assets";
+import { react1, react2 } from "../../assets";
 
 const AboutContent = () => {
+    
+    const image = (imageSrc) => {
+        return (
+            <img src={imageSrc} className="image" alt="imaget"></img>
+        );
+    };
+
   return <div className="AboutPage">
   <div className="LeftSide">
       <h1>
@@ -19,10 +26,10 @@ const AboutContent = () => {
   <div className="RightSide">
     <div className="imagecontainer">
       <div className="imagetop">
-        <img src={react1} className="image" alt="imaget"></img>
+            {image(react1)}
       </div>
       <div className="imagebottom">
-        <img src={react2} className="image" alt="imaget"></img>
+            {image(react2)}
       </div>
     </div>
   </div>

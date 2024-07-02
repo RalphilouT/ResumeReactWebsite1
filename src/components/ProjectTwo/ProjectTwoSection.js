@@ -1,10 +1,10 @@
-import "./ProjectOneStyles.css"
+import "./style.css"
+import { react2 } from "../../assets";
 import React from "react";
-import { react2 } from "../assets";
 
-const ProjectOneSection = (props) =>{
+const ProjectTwoSection = (props) =>{
     if(props.leftside === "LeftSide"){
-        return <div className="project1">
+        return <div className="project2">
     <div className={props.leftside}>
         <h1>
           {props.title}
@@ -12,6 +12,7 @@ const ProjectOneSection = (props) =>{
         <p>
           {props.content}
         </p>
+        <a href={props.source} className="button1">Source</a>
         
     </div>
     <div className={props.rightside}>
@@ -28,7 +29,7 @@ const ProjectOneSection = (props) =>{
     
   </div>
     }else{
-        return <div className="project1">
+        return <div className="project2">
             <div className={props.rightside}>
       <div className="imagecontainer">
         <div className="imagetop">
@@ -46,7 +47,7 @@ const ProjectOneSection = (props) =>{
         <p>
           {props.content}
         </p>
-        
+        <a href={props.source} className="button1">Source</a>
     </div>
     
    
@@ -56,4 +57,4 @@ const ProjectOneSection = (props) =>{
     
 };
 
-export default ProjectOneSection;
+export default ProjectTwoSection;

@@ -1,6 +1,6 @@
-import "./ProjectOneStyles.css";
+import "./style.css";
 import React from "react";
-import ProjectOneSection from "./ProjectOneSection";
+import ProjectOneSection from "./ProjectSection";
 import ProjectOneData from "./ProjectOneData";
 
 const ProjectOne = () => {

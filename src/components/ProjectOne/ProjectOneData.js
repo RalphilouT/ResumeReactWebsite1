@@ -1,4 +1,4 @@
-import { projectonereact, projectonedata2, projectonedata3 } from "../assets";
+import { projectonereact, projectonedata2, projectonedata3 } from "../../assets";
 
 const ProjectOneData = [
     {

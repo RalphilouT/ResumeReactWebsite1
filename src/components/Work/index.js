@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./WorkCardStyles.css";
+import "./style.css";
 import WorkCard from "./WorkCard"
 import WorkCardData from "./WorkCardData";
 

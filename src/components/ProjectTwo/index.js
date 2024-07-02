@@ -1,4 +1,4 @@
-import "./ProjectOneStyles.css";
+import "./style.css";
 import React from "react";
 import ProjectTwoSection from "./ProjectTwoSection";
 import ProjectTwoData from "./ProjectTwoData";

@@ -1,5 +1,5 @@
 import React from "react";
-import "./EducationCardStyles.css"
+import "./style.css"
 import EducationCard from "./EducationCard";
 import EducationCardData from "./EducationCardData";
 
@@ -12,8 +12,7 @@ const Education = () =>{
                     <EducationCard key={index}  logosrc={value.logosrc}  title = {value.title} Website={value.Website} GPA = {value.GPA} City = {value.City} Diploma = {value.Diploma} Content = {value.Content}/>
                 )
             })}
-    </div>
-        
+    </div> 
   </div>
 }
 export default Education;

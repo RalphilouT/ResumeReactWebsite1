@@ -1,6 +1,6 @@
-import "./IntroImageStyle.css";
+import "./style.css";
 import React from "react";
-import { introbg } from "../assets";
+import { introbg } from "../../assets";
 import { Link } from "react-router-dom";
 
 const introimage = () => {
