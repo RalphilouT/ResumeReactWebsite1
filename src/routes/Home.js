@@ -1,6 +1,5 @@
 import React from "react";
-import IntroImage from "../components/introimage";
-import { Navbar, Footer } from "../components";
+import { Navbar, Footer, IntroImage } from "../components";
 
 const Home = () => {
   return(

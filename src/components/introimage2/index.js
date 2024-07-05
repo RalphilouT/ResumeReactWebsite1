@@ -1,7 +1,7 @@
 import "./style.css";
 import React from "react";
 
-const introimage2 = (props) => {
+const IntroImage2 = (props) => {
   return <div className="introimg2">
       <div className="introIMAGE2">
       </div>
@@ -13,4 +13,4 @@ const introimage2 = (props) => {
   };
 
 
-export default introimage2;
+export default IntroImage2;
