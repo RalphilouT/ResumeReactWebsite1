@@ -79,7 +79,7 @@ class Form extends Component{
           Message
         </label>
         <textarea rows="6" placeholder="Type your message here" name="MESSAGE" value={this.state.MESSAGE} onChange={this.handleChange}/>
-        <button className="button1" onClick={this.submit}>Submit</button>
+        <button className="button1" name="popUpChat" onClick={this.submit}>Submit</button>
         
       </form>
     </div>

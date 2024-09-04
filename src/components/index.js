@@ -10,6 +10,7 @@ import Slider from "./Slider/index"
 import IntroImage from "./IntroImage/index"
 import IntroImage2 from "./IntroImage2/index"
 import configuration from "./configuration"
+import Chatbot from "./Chatbot"
 
 export {AboutContent, Education, Footer, Navbar, ProjectOne, ProjectTwo, Work, 
-    Form, Slider, IntroImage, IntroImage2, configuration}
+    Form, Slider, IntroImage, IntroImage2, configuration, Chatbot}

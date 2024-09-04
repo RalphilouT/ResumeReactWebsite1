@@ -1,0 +1,9 @@
+.StyleContainer{
+    max-width: 100px;
+    margin: auto;
+    display: grid;
+
+    grid-template-columns: repeat(10,1fr);
+    grid-gap: 10px;
+    padding-bottom: 5rem;
+}

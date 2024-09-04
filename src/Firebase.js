@@ -5,21 +5,21 @@ import { getDatabase, ref, set } from "firebase/database";
 
 const firebaseConfig = {
 
-  apiKey: "AIzaSyDkR5-poVe95qL_aWEuZUedwd6onCM51pQ",
+  apiKey: process.env.REACT_APP_APIKEY,
 
-  authDomain: "ralphilouresume.firebaseapp.com",
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
 
-  projectId: "ralphilouresume",
+  projectId: process.env.REACT_APP_PROJECTID,
 
-  storageBucket: "ralphilouresume.appspot.com",
+  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
 
-  messagingSenderId: "497731093415",
+  messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
 
-  appId: "1:497731093415:web:accc7c71fe7052c994ec82",
+  appId: process.env.REACT_APP_APPID,
 
-  measurementId: "G-VZE82NHGFD",
+  measurementId: process.env.REACT_APP_MEASUREMENTID,
 
-  databaseURL: "https://ralphilouresume-default-rtdb.firebaseio.com/"
+  databaseURL: process.env.REACT_APP_DATABASEURL
 
 };
 
