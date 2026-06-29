@@ -29,12 +29,7 @@ const IntroImage = () => {
     console.log("Timer Unpaused");
     setActiveAutoplay(true);
   }
-
-  //Next picture image index
-  const nextBackground = () => {
-    goToBackground(currentIndex >= configuration.maxItems -1 ? 0 : currentIndex + 1);
-  }
-
+  
   //Change index depending on mouse and animation
   const goToBackground = useCallback(
     index => 
@@ -48,18 +43,28 @@ const IntroImage = () => {
            }, configuration.speed)
         }
       },
-      [isAnimating, currentIndex]
+      [isAnimating, configuration.speed]
+  );
+
+  //Next picture image index
+  const nextBackground = useCallback(
+    index => 
+      {
+        goToBackground(currentIndex >= configuration.maxItems -1 ? 0 : currentIndex + 1);
+      },
+      [configuration.maxItems, currentIndex, goToBackground]
   );
 
   //Hook
   useEffect(() => {
+    
     if(configuration.autoplay && activeAutoplay){
       clearTimeout(autoplayRef.current);
       autoplayRef.current = setTimeout(() =>{
         nextBackground();
       }, configuration.autoplaySpeed);
     }
-  },[currentIndex, activeAutoplay, isAnimating])
+  },[currentIndex, activeAutoplay, isAnimating, configuration.autoplay, configuration.autoplaySpeed, nextBackground])
 
   //Image background
   const imageBackground = (indexNow) => {
@@ -76,7 +81,7 @@ const IntroImage = () => {
       {imageBackground(currentIndex)}
     </div>
     <div className="content">
-      <p>Software Engineer</p>
+      <p>Ralphilou Sandae Tatoy</p>
       <h1> Developer</h1>
       <div>
         <Link to="/Project" className="button1" onMouseEnter={pauseTimer} onMouseLeave={playTimer}>Projects</Link>

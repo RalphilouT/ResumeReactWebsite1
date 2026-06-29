@@ -30,9 +30,13 @@ import aspnet from "./aspnet.jpg"
 import website from "./website.jpg"
 import bg2 from "./bg2.jpg"
 import chatboxicon from "./chatbox-icon.svg"
+import flask from "./flask.png"
+import pytorch from "./illu_pytorch-49.jpg"
+import NNML from "./NNMachineLearning.jpg"
+import chatIcon from "./wired-outline-981-consultation-hover-conversation.gif"
 
 export {api, api2, api3, BCCHS, introbg, Me, MVC1, projectonereact, projectonedata2, projectonedata3
     , react1, react2, SMC, Work1, Work2, Work3, Work4, Work5, Work6, UCM,
     react, spring, fetchjs, timeseriesanalysis, cplusplus, openGl, php, sqlite
-    , aspnet, website, bg2, chatboxicon
+    , aspnet, website, bg2, chatboxicon, flask, pytorch, NNML, chatIcon
 }

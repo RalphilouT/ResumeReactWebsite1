@@ -1,5 +1,8 @@
 import { Work1, Work2, Work3, Work4, Work5, Work6, api, react, spring, fetchjs
-    , timeseriesanalysis, cplusplus, openGl, sqlite, php, website, aspnet
+    , timeseriesanalysis, cplusplus, openGl, sqlite, php, website, aspnet,
+    flask,
+    NNML,
+    pytorch
  } from "../../assets";
 /**
  * Data set for Work Card, json form
@@ -61,6 +64,15 @@ const WorkCardData = [
         indepthsummary: false,
         summaryLink: "/project1",
         source: "https://github.com/RalphilouT/WebApplicationR"
+    }
+    ,
+    {
+        imgsrc: [{image: flask}, {image: NNML}, {image: pytorch}],
+        title: "Chatbot integrated into Resume Website",
+        content: "Using Pytorch, I made a bot that responds to users initially asking basic questions such as experience, jokes, greets, and more. The API that responds to user input is done through Flask. Once the question is received, the model predicts the appropriate response via the intent logic.",
+        indepthsummary: false,
+        summaryLink: "/project1",
+        source: "https://github.com/RalphilouT/chatbottraining"
     }
 ]
 

@@ -45,7 +45,7 @@ const WorkCard = (props) => {
 
   //Next picture image index
   const nextBackground = useCallback(() => {
-    goToBackground(currentIndex >= configuration.maxItems -1 ? 0 : currentIndex + 1);
+    goToBackground(currentIndex >= configuration.maxItems - 1 ? 0 : currentIndex + 1);
   },[currentIndex, goToBackground])
 
   const prevBackground = () => {
@@ -110,9 +110,9 @@ const WorkCard = (props) => {
   
 
   <div className="arrows">
-      <IoIosArrowDropleftCircle size={40} className="leftArrow" onClick={() => nextBackground()} onMouseEnter={pauseTimer} onMouseLeave={playTimer}/>
+      <IoIosArrowDropleftCircle size={40} className="leftArrow" onClick={() => prevBackground()} onMouseEnter={pauseTimer} onMouseLeave={playTimer}/>
       {thumbnail()}
-      <IoIosArrowDroprightCircle size={40} className="rightArrow" onClick={() => prevBackground()} onMouseEnter={pauseTimer} onMouseLeave={playTimer}/>
+      <IoIosArrowDroprightCircle size={40} className="rightArrow" onClick={() => nextBackground()} onMouseEnter={pauseTimer} onMouseLeave={playTimer}/>
     </div>
   
   <h2 className="WorkTitle">{props.title}</h2>

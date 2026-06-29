@@ -62,7 +62,9 @@ const Footer = () => {
             </a>
           </div>
       </div>
+      <a href="https://lordicon.com/">Chat Icon by Lordicon.com</a>
     </div>
+    
     {/* <div class="tagembed-container" style={{width:'100%', height:'100%', overflow:'auto'}}><div class="tagembed-socialwall" data-wall-id="104189" view-url="https://widget.tagembed.com/104189">  </div> <script src="//widget.tagembed.com/embed.min.js" type="text/javascript"></script></div> */}
   </div>;
 };

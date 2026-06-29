@@ -1,6 +1,7 @@
 import "./style.css"
 import React, { Component } from "react"
-import { chatboxicon, Me } from "../../assets"
+import {Me, chatIcon } from "../../assets"
+var base64 = require('base-64');
 
 class ChatBot extends Component{
     
@@ -15,35 +16,70 @@ class ChatBot extends Component{
     handleChange = ({target})=>{
         this.setState({[target.name]: target.value});
     }
+    emptyUserResponse(chatBox){
+        let emptyMsg = {name: "Ralph", message: "You submitted an invalid sentence. Please submit your inquiry."}
+        this.messages.push(emptyMsg)
+        this.updateChatText(chatBox);
+    }
 
-    onSendButton() {
+    userFeedbackEnter(chatBox, userMessgae){
+        let msg1 = {name: "User", message: userMessgae}
+        let msg2 = {name: "Ralph", message: "Loading... Reload if it's taking too long."}
+        this.messages.push(msg1)
+        this.updateChatText(chatBox);
+        this.messages.push(msg2)
+        this.updateChatText(chatBox);
+    }
+    async onSendButton() {
         
         // extract user input text
         var chatBox = document.querySelector('.chatbox__support');
         var textField = chatBox.querySelector('input');
-        // let text1 = textField.value;
+        let token = ''
+        let headers = new Headers()
+        let loginLink = process.env.REACT_APP_CHATBOTAPI_LOGINLINK
+        let predictLink = process.env.REACT_APP_CHATBOTAPI_PREDICTLINK
         let text1 = this.state.USERMESSAGE
+        
         // if user enters nothing
-        if (text1 === "") {
+        if (text1 === undefined) {
+            this.emptyUserResponse(chatBox)
             return;
         }
+
+        this.userFeedbackEnter(chatBox, text1);
         
-        // this.updateChatText("This may take a while")
-        let msg1 = {name: "User", message: text1}
-        this.state.messages.push(msg1)
-        this.messages.push(msg1)
+        headers.set('Authorization', 'Basic ' + base64.encode(process.env.REACT_APP_APIUSER + ":" + process.env.REACT_APP_APIPASS));
+        await fetch(loginLink, {
+            mode: 'cors',
+            method: 'POST',
+            headers: headers
+        }
+        )
+        .then(r => r.json())
+        .then( r => {
+            token = r.token
+
+        })
+        .catch((error) => {
+            console.error('Error:' , error);
+            this.updateChatText(chatBox);
+            textField.value = '';
+        });
+
         
-        // In Base.html but can be hard coded to http://127.0.0.1:5000/predict 
-        fetch(process.env.REACT_APP_CHATBOT, {
+        await fetch(predictLink, {
             method: 'POST',
             body: JSON.stringify({message: text1}),
             mode: 'cors',
             headers: {
-                'Content-Type' : 'application/json'
+                'Content-Type' : 'application/json',
+                "x-access-token": token
               },
         })
         .then(r => r.json())
         .then(r => {
+            this.messages.pop()
             // Display back to the user 
             let msg2 = {name: "Ralph", message: r.answer};
             this.messages.push(msg2);
@@ -51,14 +87,16 @@ class ChatBot extends Component{
             textField.value = ''
 
         }).catch((error) => {
-            console.error('Error:' , error);
+            console.error('Error:' , error.message);
             this.updateChatText(chatBox);
             textField.value = '';
         });
-
+        this.state.USERMESSAGE = undefined
     }
 
+    
     updateChatText(chatBox){
+        
         var html = '';
         this.messages.slice().reverse().forEach(function(item, index) {
             if(item.name === "Ralph")
@@ -75,10 +113,20 @@ class ChatBot extends Component{
 
     clickChatActivate = ({target}) => {
         this.setState({[target.name] : !(this.state.popUpChat)})
-        // console.log(this.state.popUpChat)
-        
+        let registerLink = process.env.REACT_APP_CHATBOTAPI_REGISTERLINK
+        let apiUser = process.env.REACT_APP_APIUSER
+        let apiPassword = process.env.REACT_APP_APIPASS
+        fetch(registerLink, {
+            method: 'POST',
+            body: JSON.stringify({name: apiUser, password: apiPassword}),
+            mode: 'cors',
+            headers: {
+                'Content-Type' : 'application/json',
+                }
+        }).catch((error) => {
+        console.error('Error:' , error);
+  })
         var chatBox = document.querySelector('.chatbox__support');
-        // var html = '';
         
         if(this.state.popUpChat)  {
             chatBox.classList.add('chatbox--active')
@@ -91,9 +139,10 @@ class ChatBot extends Component{
         return(
             <React.Fragment>
                 <body>
-
+                <script src="https://cdn.lordicon.com/lordicon.js"></script>
                 
                 <div class="container">
+                    
                     <div class="chatbox">
                         <div class="chatbox__support">
                             <div class="chatbox__header">
@@ -107,8 +156,7 @@ class ChatBot extends Component{
                             </div>
                             <div class="chatbox__messages">
                                 <div>
-                                    <div class="messages__item messages__item--visitor"> I am using a free service so this might take a while! </div>
-
+                                    <div class="messages__item messages__item--visitor"> Let's have a chat! </div>
                                 </div>
                             </div>
                             <div class="chatbox__footer">
@@ -121,10 +169,15 @@ class ChatBot extends Component{
                                 }}></input>
                                 <button class="chatbox__send--footer send__button" onClick={this.onSendButton.bind(this)} name="messages">Send</button>
                             </div>
+                            
                         </div>
-                        <div class="chatbox__button">
-                            <button><img src={chatboxicon} alt="icon"  onClick={this.clickChatActivate} name="popUpChat"/></button>
-                        </div>
+                        
+                    </div>
+                    <div class="chatbox__button">
+                      
+        
+                        <button><img src={chatIcon} alt="icon"  onClick={this.clickChatActivate} name="popUpChat"/>
+                        </button>
                     </div>
                 </div>
                 </body>
