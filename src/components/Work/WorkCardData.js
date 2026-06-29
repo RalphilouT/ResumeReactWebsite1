@@ -9,9 +9,25 @@ import { Work1, Work2, Work3, Work4, Work5, Work6, api, react, spring, fetchjs
  */
 const WorkCardData = [
     {
+        imgsrc: [{image: react}, {image: api}, {image: pytorch}],
+        title: "Personal Website",
+        content: "Using React.js, I created a modular website that lets me make as many changes as I want by simply adding new data to storage. The components on each page are iterative, and the code is reusable. For example, each card is a single code but is shown multiple times. The application uses my custom application programming interface, which provides services such as a database and a chatbot over secure lines. The code content is properly categorized and organized. The tech stack that enables modularity and scalability includes React.js, PyTorch, and an API.",
+        indepthsummary: true,
+        summaryLink: "/project1",
+        source: "https://github.com/RalphilouT/ResumeReactWebsite1"
+    },
+    {
+        imgsrc: [{image: flask}, {image: NNML}, {image: pytorch}],
+        title: "Chatbot integrated into Resume Website",
+        content: "Using PyTorch, I made a bot that responds to users by initially asking basic questions, such as about experience, jokes, greetings, and more. The training used for the bot model is the bag-of-words method. done through Flask. The API that responds to user input is built with Flask. Once the question is received, the model predicts the appropriate response via the intent logic. Other applications may use the model by communicating through the application programming interface. The user will need user authentication and user input. The program will then provide a tailored response based on the training.",
+        indepthsummary: false,
+        summaryLink: "/project1",
+        source: "https://github.com/RalphilouT/chatbottraining"
+    },
+    {
         imgsrc: [{image: api}, {image: react}, {image: spring}],
         title: "Backend, Frontend, Testing",
-        content: "Project involving backend, frontend, and automated testing. The backend is powered by spring. The frontend was in React. The testing used were for unit testing via junit package, the frontend testing via selenium, and the backend testing via rest assured.",
+        content: "A full-stack application that showcases the development of frontend, backend, and automated testing. The backend is powered by Spring. The frontend was in React. Multiple tech stacks are used for each part of the application: unit testing with JUnit, frontend testing with Selenium, and backend testing with REST Assured.",
         indepthsummary: true,
         summaryLink: "/project2",
         source: "https://github.com/RalphilouT/-SearchLibraryApi"
@@ -19,7 +35,7 @@ const WorkCardData = [
     {
         imgsrc: [{image: Work3}, {image: fetchjs}, {image: react}],
         title: "Resume Website in native react",
-        content: "Using React API, I can create a responsive resume website that can be adjusted easily. React.js features many advantages that other frameworks do not provide. Features such as components, libraries, and more. For a more in-depth summary of this application, please tap the summary button below.",
+        content: "Using React API, I can create a responsive resume website that can be adjusted by adding a new data in a storage such as a database. React.js features many advantages that other frameworks do not provide, which enhance scalability. In addition to features such as components, libraries, and more. For a more in-depth summary of this application, please tap the summary button below.",
         indepthsummary: true,
         summaryLink: "/project1",
         source: "https://github.com/RalphilouT"
@@ -27,7 +43,7 @@ const WorkCardData = [
     {
         imgsrc: [{image: Work1}, {image: timeseriesanalysis}, {image: fetchjs}],
         title: "Sweep",
-        content: "The application solves the problem of a company that their data may be lost in cases where an endpoint is offline. This endpoint is located at another site away from the local measurement device. The device measures many metrics such as voltage. These metrics are used to analyze patterns and determine solutions.",
+        content: "The application solves the problem of a company whose data may be lost when it is offline. This endpoint is located at a different site, away from the local measurement device. The device measures many metrics, such as voltage. These metrics are used to analyze patterns and determine solutions. Preserving the authenticity of the data is imperative.",
         indepthsummary: false,
         summaryLink: "/project1",
         source: "https://github.com/RalphilouT"
@@ -35,7 +51,7 @@ const WorkCardData = [
     {
         imgsrc: [{image: Work2}, {image: cplusplus}, {image: openGl}],
         title: "C++ Game",
-        content: "Using object-oriented properties and concepts, my team creates a game that includes various AIs, hit detection, a scoring system, and more. The libraries that were used were GLEW, GLUS, and SOIL. With these libraries, we can integrate sounds, graphics, and controls for the video game application.",
+        content: "Using object-oriented properties and concepts, my team creates a game with various AIs, hit detection, a scoring system, and more. The libraries used were GLEW, GLUS, and SOIL. With these libraries, we can integrate sounds, graphics, and controls for the video game application.",
         indepthsummary: false,
         summaryLink: "/project1",
         source: "https://github.com/RalphilouT/CSE165PROJECT"
@@ -45,35 +61,26 @@ const WorkCardData = [
         title: "PHP + Database website Implementation",
         indepthsummary: false,
         summaryLink: "/project1",
-        content: "Using PHP integration of database manipulation, I was able to create a search engine for users to use to find their favorite movies and books in various libraries around the country. The login system tracks users in the database and all of its relation to their borrowed items in various libraries. Each user can borrow and return an item. The items in each library are limited and thoroughly updated in the search engine. In the future, I hope to have a tracker of an individual's past genre borrowed to show recommended items that the user may like.",
+        content: "Using PHP to create a frontend to display a large quantity of data from a relational database management system, I built a search engine that lets users find their favorite movies and books across various libraries around the country by efficiently leveraging data relationships and proper SQL statements. The login system tracks users in the database and all their relationships with the borrowed items in various libraries. Each user can borrow and return an item. The items in each library are limited and thoroughly updated in the search engine. In the future, I hope to have a tracker of an individual's past genre borrowed to show recommended items that the user may like.",
         
         source: "https://github.com/CSE111FinalProject/CSE111finalproject"
     },
     {
         imgsrc: [{image: Work6}, {image: spring}, {image: api}],
         title: "Spring MVC / Spring Boot API",
-        content: "Using spring boot, I created an API that collects information through the use of rest controller requests such as get, post, update, etc. With this foundation in place, I used the idealogy to create a website using Spring MVC. Database that is used to store model values is MongoDB and PostgreSQL through the use of the JPA repository. Using this database through the use of both SQL statement and entity. The website uses a service layer, API layer, and dao layer to implement a well-rounded interactive website.",
-        indepthsummary: false,
+        content: "Using Spring Boot, I created an API that collects information via REST controller ,methods such as GET, POST, and PUT. With this foundation in place, I used the ideology to create a website using Spring MVC. The database used to store model values is MongoDB, and PostgreSQL is used through the JPA repository. Using this database through the use of both SQL statements and entities. The website uses a service layer, an API layer, and a DAO layer to implement a well-rounded, interactive website.",
         summaryLink: "/project1",
         source: "https://github.com/RalphilouT"
     },
     {
         imgsrc: [{image: Work5}, {image: website}, {image: aspnet}],
         title: "Resume Website in .NET 6, MVC",
-        content: "Using asp.net mvc, I am able to create a responsive resume website that can be adjusted in a simple manner. Database that was used is MSSMS. The deployment database and set up is done in azure. A bit of libraries that functions the email, connection, jquery, etc.",
+        content: "Using ASP.NET MVC, I can create a responsive resume website that can be easily adjusted. The database that was used is MSSMS. The deployment database and setup are done in Azure. A few libraries that include email, connection, jQuery, etc.",
         indepthsummary: false,
         summaryLink: "/project1",
         source: "https://github.com/RalphilouT/WebApplicationR"
     }
-    ,
-    {
-        imgsrc: [{image: flask}, {image: NNML}, {image: pytorch}],
-        title: "Chatbot integrated into Resume Website",
-        content: "Using Pytorch, I made a bot that responds to users initially asking basic questions such as experience, jokes, greets, and more. The API that responds to user input is done through Flask. Once the question is received, the model predicts the appropriate response via the intent logic.",
-        indepthsummary: false,
-        summaryLink: "/project1",
-        source: "https://github.com/RalphilouT/chatbottraining"
-    }
+
 ]
 
 export default WorkCardData;

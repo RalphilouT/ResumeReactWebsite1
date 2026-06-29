@@ -17,7 +17,7 @@ const AboutContent = () => {
         Who Am I?
       </h1>
       <p>
-        My name is Ralphilou Tatoy. I'm a Software Engineer. I have knowledge of front-end and back-end developing experience. I create software through agile software development.
+        My name is Ralphilou Tatoy. I'm a Software Engineer. I have experience in front-end and back-end development in an agile environment.
       </p>
       <Link to="/Contact">
         <button className="button1">Contact</button>

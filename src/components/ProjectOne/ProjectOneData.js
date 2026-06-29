@@ -6,7 +6,7 @@ const ProjectOneData = [
         rightside: "RightSide",
         imgsrc: projectonereact,
         title: "Why React.js?",
-        content: "React framework offers speed that speeds up development process. Flexibility with its modularit and offers high performance. The most important is the reusable components, I was able to reuse grid components for the education/work containers. Each containers contain different data. The flexibility comes in mind that each component can be deleted or added by adding data into a preferred data structured. Either that be a database or a json. ",
+        content: "The React framework offers speed that speeds up the development process. Flexibility with its modularity offers high performance. The most important thing is the reusable components; I was able to reuse grid components for the education/work containers. Each container contains different data. The flexibility comes to mind with each component, which can be deleted or added by updating a preferred data structure. Either that be a database or a JSON.",
         
         
     },
@@ -15,7 +15,7 @@ const ProjectOneData = [
         rightside: "RightSide1",
         imgsrc: projectonedata2,
         title: "Component Reusability",
-        content: "Each component can be called upon a file that renders each page to be reused. For example, each header can be called multiple times with the same configuration without hassle. Simply export the file that contains the html layout and import to the appropriate routing page. Each component can then be modified via change in data. For example, a json can multiple data that represents different schools, then using the logic of a for loop into a array, we can manipulate the component to create new section for each data.",
+        content: "Each component can be called upon a file that renders each page to be reused. For example, each header can be called multiple times with the same configuration without hassle. Simply export the file containing the HTML layout and import it into the appropriate routing page. Each component can then be modified by changing the data. For example, a JSON file can contain multiple data points representing different schools. If we use a for loop over an array, we can iterate over its elements to create a new section for each data point.",
         
     },
     {
@@ -23,7 +23,7 @@ const ProjectOneData = [
         rightside: "RightSide",
         imgsrc: projectonedata3,
         title: "Responsive Website",
-        content: "There are many technologies around about that you must take account of different screen sizes. This website accounts for that with the use of animation, text size, and more. With the use of techstack such as CSS, JS, HTML, etc., I have been able to manipulate the front-end with ease.",
+        content: "There are many technologies to take into account for different screen sizes. This website accounts for that through animation, text size, and more. Using tech stacks such as CSS, JS, and HTML, I have been able to manipulate the front end with ease.",
         
     }
 ]
